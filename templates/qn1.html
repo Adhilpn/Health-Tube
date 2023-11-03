@@ -1,0 +1,36 @@
+
+{%extends "formBase.html"%}
+{%load static%}
+{% block content %}
+{%include "formnav.html"%}
+
+<div class="container">
+    
+
+
+<div class="progress" >
+    <div class="progress-bar" role="progressbar" aria-valuenow="10"
+    aria-valuemin="0" aria-valuemax="100" style="width:0% ;background-color: orange;" >
+      <span class="sr-only" >70% Complete</span>
+    </div>
+  </div>
+</div>
+<h1 class="text" style="text-align: center;color: white;">BUILD YOUR PERFECT BODY</h1>
+<h3 class="text" style="text-align: center;color: white;">According to your age</h3>
+<div class="well" style=" width: fit-content;padding-left: 150px;background-color:rgb(0, 0, 0) ;border: black;">
+
+    <a href="/qn2"><h2 style="color: orange;">{{ note }}</h2> </a>  
+    <form action="{%url 'qn1'%}" method="post" style="color: orange;font-size: xx-large;">
+        {%csrf_token%}
+        {{qnform.as_p}}
+        
+        <button type="submit" style="background-color: rgb(255, 60, 0);text-align: center;font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700;color: white;padding: 20px;font-size: large;margin-top: 20px;"> Submit
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="color: white;"></span>
+            </button>
+    </form>
+    
+    
+</div>
+
+{%endblock content%}
+

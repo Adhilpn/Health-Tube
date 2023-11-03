@@ -1,0 +1,38 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+            .bgded{
+                    background-image: url( "{% static 'delete.jpg'%}");
+                    background-size:cover;
+                    background-repeat: no-repeat;
+                    background-color: black;
+
+        }
+        
+    </style>
+</head>
+<body class="bgded">
+    {%include "userviewnav.html" %}
+
+
+<div class="jumbotron" style="background-color: black;">
+    <div class="container" >
+        <h1 style="color: orange;">Started New Survey !</h1>
+        <p style="color: rgb(255, 255, 255);">We will be able to guide you more after this..</p>
+        <a href="/qn1"><button type="button" style="background-color: rgb(255, 60, 0);text-align: center;font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700;color: white;padding: 20px;font-size: large;margin-top: 20px;"> Ok Got it
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="color: white;"></span>
+            </button></a>
+    </div>
+</div>
+
+
+
+    
+</body>
+</html>

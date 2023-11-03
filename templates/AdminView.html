@@ -1,0 +1,24 @@
+{%extends "formBase.html"%}
+{%load static%}
+{% block content %}
+{%include "userviewnav.html"%}
+
+<div class="jumbotron" style="background-color: black;">
+  <div class="container">
+    <h1 style="color: orange;">Current Admins and users of the website</h1>
+    <form  method="post" style="color: rgb(250, 250, 250);font-size: xx-large;margin-top: 70px;">
+      {%csrf_token%}
+      {{userform.as_table}}
+      
+      
+  </form>
+  </div>
+</div>
+
+
+
+    
+    
+    
+{%include "footer.html"%}
+{%endblock content%}
