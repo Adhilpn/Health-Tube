@@ -1,0 +1,21 @@
+{%extends "base.html"%}
+{%block content %}
+{%include "basenav.html"%}
+<form method="post">
+    
+    <div class="jumbotron" style="background-color: rgb(11, 11, 11)">
+        <div  class="container" style="color:rgb(123, 118, 118)">
+            <h1 id="text" style="color: orange;padding-bottom: 70px;">Become our valued member now !</h1>
+    
+    
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit" style="background-color: rgb(255, 60, 0);text-align: center;font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: 700;color: white;padding: 20px;font-size: large;margin-top: 20px;"> Sign Up
+            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true" style="color: white;"></span>
+            </button>
+        </div>
+    </div>
+    
+    
+</form>
+{%endblock%}

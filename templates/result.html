@@ -1,0 +1,380 @@
+
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #diabetic{
+          background-image: url( "{% static 'dplanbtn.jpg'%}");
+
+        
+          
+          
+          
+            }
+        #veg{
+          background-image: url( "{% static 'vegPlanbtn.jpg'%}");
+          background-size: 300px;
+        
+        }
+        .text{
+            text-shadow: -1px 1px 2px #000,
+				  1px 2px 6px #000,
+				  1px -1px 0 #000,
+				  -1px -1px 0 #000;
+            }
+        #welness{
+            background-image: url( "{% static 'wPlanbtn.jpg'%}");
+            background-size: 400px;
+
+        }
+
+        #athlete{
+            background-image: url( "{% static 'aPlanbtn.jpg'%}");
+            background-size: 300px;
+
+        }
+        #international{
+            background-image: url( "{% static 'intPlanbtn.jpg'%}");
+            background-size: 300px;
+
+        }
+        #chest{
+            background-image: url( "{% static 'chestbg.jpg'%}");
+            background-size: 500px;
+            background-repeat: no-repeat;
+
+        }
+        #back{
+            background-image: url( "{% static 'backbg.jpg'%}");
+            background-size: 500px;
+            background-repeat: no-repeat;
+
+        }
+        #bicep{
+            background-image: url( "{% static 'bicepbg.jpg'%}");
+            background-size: 500px;
+            background-repeat: no-repeat;
+
+        }
+        #tricep{
+            background-image: url( "{% static 'tricepbg.jpg'%}");
+            background-size: 500px;
+            background-repeat: no-repeat;
+
+        }
+        #shoulder{
+            background-image: url( "{% static 'shoulderbg.jpg'%}");
+            background-size: 500px;
+            background-repeat: no-repeat;
+
+        }
+        #leg{
+            background-image: url( "{% static 'legbg.jpg'%}");
+            background-size: 500px;
+            background-repeat: no-repeat;
+
+        }
+        #target{
+            background-image: url( "{% static 'target.jpg'%}");
+            background-size:contain;
+            background-repeat: no-repeat;
+            color: #ffffff00;
+        }
+        
+      </style>
+
+</head>
+<body style="background-color: #000;" >
+    
+
+{%include "resultnav.html"%}
+
+<h1 style=" color: white;padding-left: 50px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">We suggest the following based on your answers</h1>
+<a href="/diabeticPlan">
+
+    <div>
+        
+        <div id="diabetic" class="well" style="font-weight: 800;color: rgb(255, 255, 255);border-color: black;border-radius: 800px;" >
+            <p class=text >Check Out our special dibetic meal plan</p>
+        </div> 
+        
+    </div>
+    </a>
+
+    <a href="/athletePlan">
+
+        <div>
+            
+            <div id="athlete" class="well" style="font-weight: 800;color: rgb(255, 255, 255);border-color: black;border-radius: 800px;" >
+                <p class=text >Check Out our special athlete meal plan</p>
+            </div> 
+            
+        </div>
+        </a>
+    <a href="/vegPlan">
+
+        <div>
+            
+            <div id="veg" class="well" style="font-weight: 800;color: rgb(255, 255, 255);border-color: black;border-radius: 800px;" >
+                <p class=text >Check Out our special vegetarian meal plan</p>
+            </div> 
+            
+        </div>
+        </a>
+    
+    <a href="/wellnessPlan">
+        <div >
+            
+            <div id="welness" class="well" style="font-weight: 800;color: rgb(255, 255, 255);border-color: black;border-radius: 800px;" >
+                <p class=text >Check Out our special wellness meal plan</p>
+            </div>
+            
+        </div>
+        </a>
+
+        <a href="/intPlan">
+            <div >
+                
+                <div id="international" class="well" style="font-weight: 800;color: rgb(255, 255, 255);border-color: black;border-radius: 800px;" >
+                    <p class=text >Check Out our special international meal plan</p>
+                </div>
+                
+            </div>
+            </a>
+
+        
+
+    
+    <div class="jumbotron" style="background-color: #000;">
+        <div class="container">
+            <h1 style="color: white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Shredded plan for {{result6.Name}} is ready</h1>
+            
+            <div class="row" style="padding-left: 70px;">
+                
+            
+            
+            <div class="col-sm-5">
+                
+            
+            
+            <div class="well" style="color: #000000;width:400px;">
+                <div class="row">
+                    
+                    <div class="col-sm-4">
+                        <img src="{% static 'target.jpg'%}" class="img-responsive" alt="Image" style="height: 50px;width: 50px;">
+                    </div>
+                    
+                    <div class="col-sm-6" style="font-size: x-large;padding-top: 10px;">
+                        <p style="font-weight: bold;">Goal</p>
+                        {{result3.options}}
+                    </div>
+                    
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="well" style="color: #000000;width:400px;">
+                    <div class="row">
+                        
+                        <div class="col-sm-4">
+                            <img src="{% static 'workout.jpg'%}" class="img-responsive" alt="Image" style="height: 50px;width: 50px;">
+                        </div>
+                        
+                        <div class="col-sm-6" style="font-size: x-large;padding-top: 10px;">
+                            <p style="font-weight: bold;">Workout at</p>
+                            {{result4.options}}
+                        </div>
+                        
+                        </div>
+                        
+                        
+                </div>
+            </div>
+            </div>
+            <div class="row" style="padding-left: 70px;">
+                
+            
+            
+                <div class="col-sm-5">
+                    
+                
+                
+                <div class="well" style="color: #000000;width:400px;">
+                    <div class="row">
+                        
+                        <div class="col-sm-4">
+                            <img src="{% static 'body.jpg'%}" class="img-responsive" alt="Image" style="height: 50px;width: 50px;">
+                        </div>
+                        
+                        <div class="col-sm-6" style="font-size: x-large;padding-top: 10px;">
+                            <p style="font-weight: bold;">Body Type</p>
+                            {{result5.options}}
+                        </div>
+                        
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="well" style="color: #000000;width:400px;">
+                        <div class="row">
+                            
+                            <div class="col-sm-4">
+                                <img src="{% static 'time.jpg'%}" class="img-responsive" alt="Image" style="height: 50px;width: 50px;">
+                            </div>
+                            
+                            <div class="col-sm-6" style="font-size: x-large;padding-top: 10px;">
+                                <p style="font-weight: bold;">Duration</p>
+                                {{result7.options}}
+                            </div>
+                            
+                            </div>
+                            
+                            
+                    </div>
+                </div>
+                
+                </div>
+                <div class="well" style="color: #000000;width:400px;margin-left: 300px;">
+                    <div class="row">
+                            
+                        <div class="col-sm-4">
+                            <img src="{% static 'water.jpg'%}" class="img-responsive" alt="Image" style="height: 50px;width: 50px;">
+                        </div>
+                        
+                        <div class="col-sm-6" >
+                            <p style="background-color: rgb(255, 60, 0);font-size: small;width: fit-content;font-weight: bold;margin-left: 150px;">Suggested</p>
+                            <p style="font-size: small;">Daily water intake</p>
+                            <p>2 Litres</p>
+                        </div>
+                        
+                        </div>
+                    
+                    
+                    <div class="row">
+                        
+                        <div class="col-sm-2">
+                            <img src="{% static 'fillledglass.jpg'%}" class="img-responsive" alt="Image" style="height: 40px;width: 50px;">
+                            
+                        </div>
+                        
+                        <div class="col-sm-2" >
+                            <img src="{% static 'fillledglass.jpg'%}" class="img-responsive" alt="Image" style="height: 40px;width: 50px;">
+                        </div>
+                        <div class="col-sm-2" >
+                            <img src="{% static 'fillledglass.jpg'%}" class="img-responsive" alt="Image" style="height: 40px;width: 50px;">
+                        </div>
+                        <div class="col-sm-2" >
+                            <img src="{% static 'fillledglass.jpg'%}" class="img-responsive" alt="Image" style="height: 40px;width: 50px;">
+                        </div>
+                        <div class="col-sm-2" >
+                            <img src="{% static 'fillledglass.jpg'%}" class="img-responsive" alt="Image" style="height: 40px;width: 50px;">
+                        </div>
+                        <div class="col-sm-2" >
+                            <img src="{% static 'fillledglass.jpg'%}" class="img-responsive" alt="Image" style="height: 40px;width: 50px;">
+                        </div>
+                        
+                        
+                        </div>
+        
+                        <div class="row" >
+                            <div class="col-sm-2" >
+                                <img src="{% static 'fillledglass.jpg'%}" class="img-responsive" alt="Image" style="height: 40px;width: 50px;">
+                            </div>
+                            <div class="col-sm-2" >
+                                <img src="{% static 'fillledglass.jpg'%}" class="img-responsive" alt="Image" style="height: 40px;width: 50px;">
+                            </div>
+                        </div>
+                        
+                    </div>
+
+
+
+
+            </div>
+        </div>
+        
+            
+            
+        <a href="/chest">
+
+            <div >
+                
+                <div id="chest" class="well" style="font-weight: 800;color: white;border-color: black;border-radius: 800px;height: 300px;background-color: black" >
+                    <p class=text style="padding-top: 100px;padding-left: 800px;font-size: xx-large;">CHEST PLAN</p>
+                </div> 
+                
+            </div>
+            </a>      
+        <a href="/back">
+
+            <div >
+                    
+                <div id="back" class="well" style="font-weight: 800;color: white;border-color: black;border-radius: 800px;height: 300px;background-color: black" >
+                    <p class=text style="padding-top: 100px;padding-left: 800px;font-size: xx-large;">BACK PLAN</p>
+                </div> 
+                    
+            </div>
+        </a>  
+                
+        <a href="/biceps">
+
+             <div >
+                        
+                <div id="bicep" class="well" style="font-weight: 800;color: white;border-color: black;border-radius: 800px;height: 300px;background-color: black" >
+                        <p class=text style="padding-top: 100px;padding-left: 800px;font-size: xx-large;">BICEPS PLAN</p>
+                </div> 
+                        
+            </div>
+        </a>  
+
+        <a href="/triceps">
+
+            <div >
+                            
+                <div id="tricep" class="well" style="font-weight: 800;color: white;border-color: black;border-radius: 800px;height: 300px;background-color: black" >
+                    <p class=text style="padding-top: 100px;padding-left: 800px;font-size: xx-large;">TRICEPS PLAN</p>
+                </div> 
+                            
+            </div>
+        </a>
+                
+        <a href="/shoulder">
+
+            <div >
+                            
+                <div id="shoulder" class="well" style="font-weight: 800;color: white;border-color: black;border-radius: 800px;height: 300px;background-color: black" >
+                    <p class=text style="padding-top: 100px;padding-left: 800px;font-size: xx-large;">SHOULDER PLAN</p>
+                </div> 
+                            
+            </div>
+        </a>
+        <a href="/legs">
+
+            <div >
+                            
+                <div id="leg" class="well" style="font-weight: 800;color: white;border-color: black;border-radius: 800px;height: 300px;background-color: black;" >
+                    <p class=text style="padding-top: 100px;padding-left: 800px;font-size: xx-large;">LEG PLAN</p>
+                 </div> 
+                            
+            </div>
+        </a>
+            
+            
+            
+            
+    
+    
+
+
+        {%include "footer.html"%}
+</body>
+</html>
